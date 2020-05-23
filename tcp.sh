@@ -257,7 +257,7 @@ remove_all(){
 	sed -i '/net.ipv4.tcp_timestamps/d' /etc/sysctl.conf
 	sed -i '/net.ipv4.tcp_max_orphans/d' /etc/sysctl.conf
 	if [[ -e /appex/bin/lotServer.sh ]]; then
-		bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) uninstall
+		bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/fei5seven/lotServer/master/lotServer/install.sh) uninstall
 	fi
 	clear
 	echo -e "${Info}:清除加速完成。"
